@@ -7,6 +7,7 @@ import './assets/less/index.less'
 import router from './router'
 import store from './store'
 import axios from 'axios'
+import './api/mock'
 
 
 Vue.prototype.$axios = axios

@@ -46,49 +46,13 @@
 </template>
 
 <script>
+import { getData } from '../../api/data'
 export default {
     name: 'Home',
     data(){
         return{
             userImage: require('../../assets/user.jpg'),
-            tableData:[
-                {
-                    name: 'oppo',
-                    todayBuy: 100,
-                    monthBuy: 300,
-                    totalBuy: 800
-                },
-                {
-                    name: 'vivo',
-                    todayBuy: 100,
-                    monthBuy: 300,
-                    totalBuy: 800
-                },
-                {
-                    name: 'Apple',
-                    todayBuy: 100,
-                    monthBuy: 300,
-                    totalBuy: 800
-                },
-                {
-                    name: 'Xiaomi',
-                    todayBuy: 100,
-                    monthBuy: 300,
-                    totalBuy: 800
-                },
-                {
-                    name: 'Samsung',
-                    todayBuy: 100,
-                    monthBuy: 300,
-                    totalBuy: 800
-                },
-                {
-                    name: 'Meizu',
-                    todayBuy: 100,
-                    monthBuy: 300,
-                    totalBuy: 800
-                }
-            ],
+            tableData:[],
             tableLabel:{
                 name:"Brand",
                 todayBuy:"Today Buy",
@@ -135,6 +99,15 @@ export default {
             ],
         }
     },
+    mounted(){
+        getData().then(response => {
+            const {code,data} = response.data
+            if(code === 1){
+                this.tableData = data.tableData
+            }
+            console.log(response)
+        })
+    }
 }
 </script>
 
