@@ -1,4 +1,4 @@
-    <template>
+<template>
   <el-row class="home" :gutter="0">
     <el-col :span="8" style="margin-top: 20px">
       <el-card shadow="hover">
