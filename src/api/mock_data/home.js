@@ -51,37 +51,37 @@ export default {
         // 柱状图
         userData: [
           {
-            date: 'Monday',
+            date: '1',
             new: 5,
             active: 200
           },
           {
-            date: 'Tuesday',
+            date: '2',
             new: 10,
             active: 500
           },
           {
-            date: 'Wednesday',
+            date: '3',
             new: 12,
             active: 550
           },
           {
-            date: 'Thursday',
+            date: '4',
             new: 60,
             active: 800
           },
           {
-            date: 'Friday',
+            date: '5',
             new: 65,
             active: 550
           },
           {
-            date: 'Saturday',
+            date: '6',
             new: 53,
             active: 770
           },
           {
-            date: 'Sunday',
+            date: '7',
             new: 33,
             active: 170
           }
