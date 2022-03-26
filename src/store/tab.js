@@ -25,6 +25,10 @@ export default{
                     state.currentMenu = null
                 }
             }
+        },
+        closeTag(state,value){
+            const result = state.tabsList.findIndex(item => item.name === value.name)
+            state.tabsList.splice(result, 1)
         }
     }
 }

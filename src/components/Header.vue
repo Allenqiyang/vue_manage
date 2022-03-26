@@ -2,7 +2,7 @@
     <header>
         <div class='l-content'>
             <el-button @click="handleMenu" plain icon='el-icon-menu' size='mini'></el-button>
-            <h3 style='color:#fff'>Home page</h3>
+            <h3 style='color:#fff'>Welcome to Allen's System</h3>
         </div>
         <div class='r-content'>
             <el-dropdown trigger='hover' size='mini'>
@@ -44,8 +44,9 @@ export default {
     .l-content{
         display:flex;
         align-items: center;
-        justify-content: space-between;
-        width:140px;
+        .el-button{
+            margin-right: 20px;
+        }
     }
     .r-content{
         img{

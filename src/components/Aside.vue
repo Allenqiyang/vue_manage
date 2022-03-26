@@ -6,7 +6,7 @@
     @close="handleClose"
     :collapse="isCollapse"
   >
-    <h3>Allen's System</h3>
+    <h3>Hello🎉</h3>
     <el-menu-item @click="clickMenu(item)" v-for="item in noChildren" :index="item.path" :key="item.path">
       <i :class="'el-icon-'+item.icon"></i>
       <span slot="title">{{item.label}}</span>
