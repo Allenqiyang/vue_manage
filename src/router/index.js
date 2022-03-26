@@ -13,13 +13,28 @@ const routes = [
             {
                 path:'/home',
                 name:'home',
-                component:()=>import('../views/home/index.vue')
+                component:()=>import('../views/home')
             },
             {
                 path:'/user',
                 name:'user',
-                component:()=>import('../views/user/index.vue')
-            }
+                component:()=>import('../views/user')
+            },
+            {
+                path:'/mall',
+                name:'mall',
+                component:()=>import('../views/mall')
+            },
+            {
+                path:'/page1',
+                name:'page1',
+                component:()=>import('../views/others/page1.vue')
+            },
+            {
+                path:'/page2',
+                name:'page2',
+                component:()=>import('../views/others/page2.vue')
+            },
         ]
     }
 ]

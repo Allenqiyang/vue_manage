@@ -59,7 +59,7 @@
   </el-row>
 </template>
 
-    <script>
+<script>
 import { getData } from "../../api/data"
 import * as echarts from "echarts"
 
