@@ -29,10 +29,10 @@ export default {
             this.$router.push({name: item.name})
         },
         close(tag,index){
+            const length = this.tags.length - 1
             this.$store.commit('closeTag',tag)
-            if(tag.name !== this.$route.name) 
-            return
-            if(index === this.tags.length - 1){
+            if(tag.name !== this.$route.name)  return
+            if(index === length){
                 this.$router.push({
                     name: this.tags[index - 1].name
                 })
