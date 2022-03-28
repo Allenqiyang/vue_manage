@@ -1,9 +1,9 @@
 <template>
-    <el-form ref="form" label-width="100px" :model="form" :inline="inline">
+    <el-form ref="form" label-width="200px" :model="form" :inline="inline">
         <el-form-item v-for="item in formLabel" :key="item.label" :label="item.label">
             <el-input 
                 v-if="item.type === 'input'"
-                :placeholder="'Please input'+item.label"
+                :placeholder="'Please input '+item.label"
                 v-model="form[item.model]">
             ></el-input>
             <el-switch v-if="item.type === 'switch'" v-model="form[item.model]"></el-switch>
@@ -33,10 +33,10 @@
 
 <script>
 export default {
-    name:'form',
+    name:'myForm',
     props:{
-        formLabel: Array,
-        form: Object,
+        formLabel: Array,   //标签数据
+        form: Object,       //表单数据
         inline: Boolean
     }
 }
