@@ -13,3 +13,11 @@ export const getUser = (params) => {
         params: params
     })
 }
+
+export const getMenu = (params) => {
+    return axios.request({
+        url: '/permission/getMenu',
+        method: 'post',
+        data: params
+    })
+}

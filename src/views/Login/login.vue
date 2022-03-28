@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import Mock from 'mockjs'
+import {getMenu} from '../../api/data'
 export default {
     name: 'login',
     data() {
@@ -72,10 +74,19 @@ export default {
     },
     methods:{
         login(){
-
+            getMenu(this.form).then(response => {
+                if(response.code === 20000){
+                    
+                }else{
+                    this.$message.warning(response.data.message)
+                }
+            })
+            const token = Mock.random.guid()    //用mock模拟一个随机数作为token
+            this.$store.commit('setToken', token)
+            this.$router.push({name: 'home'})
         },
         onfocus(){
-            this.$refs.back.style = 'width: 100%; filter: blur(5px);'
+            this.$refs.back.style = 'width:100%; filter:blur(5px); opacity:0.5'
         },
         onblur(){
             this.$refs.back.style = 'width: 100%;'
