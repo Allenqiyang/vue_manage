@@ -1,3 +1,4 @@
+import Cookie from 'js-cookie'
 export default{
     state:{
         isCollapse:true,
@@ -9,7 +10,8 @@ export default{
                 icon:'home'
             }
         ],
-        currentMenu:null
+        currentMenu:null,
+        menu:[]
     },
     mutations:{
         collapseMenu(state){
@@ -29,6 +31,37 @@ export default{
         closeTag(state,value){
             const result = state.tabsList.findIndex(item => item.name === value.name)
             state.tabsList.splice(result, 1)
+        },
+        setMenu(state,value){
+            state.menu = value
+            Cookie.set('menu',JSON.stringify(value))
+        },
+        clearMenu(state){
+            state.menu = []
+            Cookie.remove('menu')
+        },
+        addMenu(state,value){
+            if(!Cookie.get('menu')) return
+            const menu = JSON.parse(Cookie.get('menu'))
+            state.menu = menu
+            const menuArray = []
+            //动态添加数据
+            menu.forEach(item => {
+                if(item.children){
+                    item.children = item.children.map(item => {
+                        item.component = () => import(`../views/${item.url}`)
+                        return item
+                    })
+                    menuArray.push(...item.children)
+                }else{
+                    item.component = () => import(`../views/${item.url}`)
+                    menuArray.push(item)
+                }
+            })
+            // 动态添加路由
+            menuArray.forEach(item => {
+                value.addRoute('Main',item)
+            })
         }
     }
 }

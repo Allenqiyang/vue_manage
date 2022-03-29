@@ -8635,10 +8635,10 @@
     "vue-hot-reload-api" "^2.3.0"
     "vue-style-loader" "^4.1.0"
 
-"vue-router@^3.2.0":
-  "integrity" "sha512-khkrcUIzMcI1rDcNtqkvLwfRFzB97GmJEsPAQdj7t/VvpGhmXLOkUfhc+Ah8CvpSXGXwuWuQO+x8Sy/xDhXZIA=="
-  "resolved" "https://registry.npmmirror.com/vue-router/-/vue-router-3.2.0.tgz"
-  "version" "3.2.0"
+"vue-router@^3.5.3":
+  "integrity" "sha512-FUlILrW3DGitS2h+Xaw8aRNvGTwtuaxrRkNSHWTizOfLUie7wuYwezeZ50iflRn8YPV5kxmU2LQuu3nM/b3Zsg=="
+  "resolved" "https://registry.npmmirror.com/vue-router/-/vue-router-3.5.3.tgz"
+  "version" "3.5.3"
 
 "vue-style-loader@^4.1.0", "vue-style-loader@^4.1.2":
   "integrity" "sha512-sFuh0xfbtpRlKfm39ss/ikqs9AbKCoXZBpHeVZ8Tx650o0k0q/YCM7FRvigtxpACezfq6af+a7JeqVTWvncqDg=="

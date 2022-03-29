@@ -9,32 +9,33 @@ const routes = [
         path: '/',
         name: 'Main',
         component: Main,
+        redirects:'/home',
         children: [
-            {
-                path:'/home',
-                name:'home',
-                component:()=>import('../views/home')
-            },
-            {
-                path:'/user',
-                name:'user',
-                component:()=>import('../views/user')
-            },
-            {
-                path:'/mall',
-                name:'mall',
-                component:()=>import('../views/mall')
-            },
-            {
-                path:'/page1',
-                name:'page1',
-                component:()=>import('../views/others/page1.vue')
-            },
-            {
-                path:'/page2',
-                name:'page2',
-                component:()=>import('../views/others/page2.vue')
-            },
+            // {
+            //     path:'/home',
+            //     name:'home',
+            //     component:()=>import('../views/home')
+            // },
+            // {
+            //     path:'/user',
+            //     name:'user',
+            //     component:()=>import('../views/user')
+            // },
+            // {
+            //     path:'/mall',
+            //     name:'mall',
+            //     component:()=>import('../views/mall')
+            // },
+            // {
+            //     path:'/page1',
+            //     name:'page1',
+            //     component:()=>import('../views/others/page1.vue')
+            // },
+            // {
+            //     path:'/page2',
+            //     name:'page2',
+            //     component:()=>import('../views/others/page2.vue')
+            // },
         ]
     },
     {
@@ -45,6 +46,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+    // path: '/home',
     mode: 'history',
     routes: routes
 })

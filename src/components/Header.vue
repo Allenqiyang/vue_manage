@@ -11,7 +11,7 @@
                 </span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item>Personal</el-dropdown-item>
-                    <el-dropdown-item>Log out</el-dropdown-item>
+                    <el-dropdown-item @click.native="logOut">Log out</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
         </div>
@@ -29,6 +29,11 @@ export default {
     methods:{
         handleMenu(){
             this.$store.commit('collapseMenu')
+        },
+        logOut(){
+            this.$store.commit('clearToken')
+            this.$store.commit('cleatMenu')
+            this.$router.push('/login')
         }
     }
 }

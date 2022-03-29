@@ -27,49 +27,7 @@
 export default {
   data() {
     return {
-      menu:[
-        {
-          path:'/',
-          name:'home',
-          label:'Home',
-          icon:'s-home',
-          url:'Home/Home'
-        },
-        {
-          path:'/mall',
-          name:'mall',
-          label:'Goods-Manage',
-          icon:'video-play',
-          url:'MallManage/MallManage'
-        },
-        {
-          path:'/user',
-          name:'user',
-          label:'User-Manage',
-          icon:'user',
-          url:'UserManage/UserManage'
-        },
-        {
-          label:'Others',
-          icon:'location',
-          children:[
-            {
-              path:'/page1',
-              name:'page1',
-              label:'page1',
-              icon:'setting',
-              url:'Other/PageOne'
-            },
-            {
-              path:'/page2',
-              name:'page2',
-              label:'page2',
-              icon:'setting',
-              url:'Other/PageTwo'
-            }
-          ]
-        }
-      ]
+      menu:[]
     };
   },
   methods: {
@@ -88,13 +46,16 @@ export default {
   },
   computed:{
     noChildren(){
-      return this.menu.filter(item => !item.children)
+      return this.dynamicMenu.filter(item => !item.children)
     },
     hasChildren(){
-      return this.menu.filter(item => item.children)
+      return this.dynamicMenu.filter(item => item.children)
     },
     isCollapse(){
       return this.$store.state.tab.isCollapse
+    },
+    dynamicMenu(){
+      return this.$store.state.tab.menu
     }
   }
 };
