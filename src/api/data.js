@@ -1,3 +1,4 @@
+//使用axios调用mock.js中返回的响应数据
 import axios from './axios'
 
 export const getData = () => {

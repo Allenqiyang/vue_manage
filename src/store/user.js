@@ -1,3 +1,5 @@
+//该文件用于存储作为Cookie的token
+
 import Cookie from 'js-cookie'
 
 export default{

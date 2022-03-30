@@ -88,6 +88,7 @@ export default {
             this.$store.commit('setToken', token)
             this.$router.push({name: 'home'}) */
         },
+        // 模仿bing搜索聚焦时背景虚化的效果
         onfocus(){
             this.$refs.back.style = 'width:100%; filter:blur(5px); opacity:0.5'
         },

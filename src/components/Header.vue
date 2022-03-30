@@ -32,7 +32,7 @@ export default {
         },
         logOut(){
             this.$store.commit('clearToken')
-            this.$store.commit('cleatMenu')
+            this.$store.commit('clearMenu')
             this.$router.push('/login')
         }
     }

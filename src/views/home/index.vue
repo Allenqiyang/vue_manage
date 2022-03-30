@@ -225,7 +225,6 @@ export default {
 
         echarts.init(this.$refs.videoEcharts).setOption(videoOptions)
       }
-      console.log(response)
     })
   }
 }
