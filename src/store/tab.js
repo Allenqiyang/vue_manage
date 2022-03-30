@@ -11,7 +11,7 @@ export default{
             }
         ],
         currentMenu:null,
-        menu:[]
+        menu:[]     //用来存储动态添加路由的数据
     },
     mutations:{
         collapseMenu(state){
