@@ -1,3 +1,5 @@
+//数据拦截生成模拟数据并作为响应数据返回
+
 import Mock from 'mockjs'
 import homeApi from './mock_data/home.js'
 import userApi from './mock_data/user.js'
