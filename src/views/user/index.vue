@@ -164,7 +164,6 @@ export default {
             }
         },
         getList(name = ''){
-            this.config.loading = true
             name ? (this.config.page = 1) : ''
             getUser({
                 page: this.config.page,
@@ -175,7 +174,6 @@ export default {
                     return item
                 })
                 this.config.total = response.data.count
-                this.config.loading = false
             })
         },
         editUser(row){
